@@ -3,25 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Counter App</title>
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
 
+        h1 {
+            font-size: 2.5rem;
+            color: #333;
+        }
+
+        #count-el {
+            font-size: 3rem;
+            color: #007bff;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        #increment-btn {
+            background-color: #007bff;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #increment-btn:hover {
+            background-color: #0056b3;
+        }
+
+        #increment-btn:active {
+            transform: scale(0.98);
+        }
     </style>
 </head>
 <body>
-    <h1>People entered</h1>
-    <h2 id="count-el">0</h2>
-    <button id="increment-btn">INCREMENT</button>
+    <div>
+        <h1>People Entered</h1>
+        <h2 id="count-el">0</h2>
+        <button id="increment-btn" onclick="incrementCount()">INCREMENT</button>
+    </div>
+    
     <script>
-      //  document.getElementById("count-el").innerText=5
+        let count = 0;
    
-   let count=5
-   
-
-
-
-      console.log(count);
-
+        function incrementCount() {
+            count++;
+            document.getElementById("count-el").innerText = count;
+        }
     </script>
 </body>
 </html>
